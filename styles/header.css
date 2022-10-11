@@ -1,0 +1,60 @@
+.cabeçalho__menu-hamburguer {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/Menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+
+.cabeçalho {
+  background-color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.container__imagem {
+  padding: 1em;
+}
+
+.lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 60vw;
+}
+
+/* checked detecta se o checkbox está preenchido. O acento "tio" "~" é um combinador css, ele procura outro elemento que vem em seguida ao de antes, que tenha a classe posterior. Ex. Se o container botão tiver checked, ele vai procurar outro que venha depois dele que tenha a classe "lista.menu" e vai botar display block nele, se não tiver nenhuma outra tag com a classe "lista-menu", não fará nenhuma ação, o mesmo vale caso o checked não esteja preenchido.  */
+.container__botao:checked ~ .lista-menu {
+  display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+  padding: 1em;
+  background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+  display: none;
+}
