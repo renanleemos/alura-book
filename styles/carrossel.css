@@ -21,3 +21,7 @@
     position: initial;
     margin: 1em 0;
 }
+
+.card__descricao {
+  display: flex;
+}
